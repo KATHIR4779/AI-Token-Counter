@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="3xpVS2lESn_zvrdNsHk3daf4PZu0nlxikqgDPAZRQOg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Prompt Token Counter — Free Online Tool</title>
-  <meta name="description" content="Count tokens in your AI prompt instantly. Free online token counter for ChatGPT, Claude, and Gemini. No sign-up required.">
+<title>AI Prompt Token Counter | ChatGPT, Claude & Gemini Calculator</title>
+<meta name="description" content="Free online AI prompt token counter. Instantly estimate tokens, words, and costs for ChatGPT (GPT-4o), Claude 3.5, and Gemini. 100% secure & local.">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #1a1a1a; }
@@ -22,6 +22,14 @@
     .faq details { border: 1px solid #eee; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; }
     .faq summary { cursor: pointer; font-weight: 500; }
     .faq p { margin-top: 8px; color: #555; line-height: 1.6; }
+    .ad-slot { 
+  margin: 32px 0; 
+  text-align: center; 
+  background: #fafafa; 
+  padding: 16px; 
+  border-radius: 8px; 
+  min-height: 280px;
+}
   </style>
 </head>
 <body>
@@ -30,25 +38,24 @@
   <p class="sub">Paste your prompt below to instantly count tokens, words, and characters.</p>
 
   <textarea id="input" placeholder="Paste your AI prompt here..." oninput="count()"></textarea>
-
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-value" id="tokens">0</div>
-      <div class="stat-label">Estimated tokens</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" id="words">0</div>
-      <div class="stat-label">Words</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" id="chars">0</div>
-      <div class="stat-label">Characters</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" id="cost">$0.00</div>
-      <div class="stat-label">Est. GPT-4o cost</div>
-    </div>
-  </div>
+<div class="stats">
+  <section class="stat">
+    <h3 class="stat-label">Estimated Tokens</h3>
+    <div class="stat-value" id="tokens">0</div>
+  </section>
+  <section class="stat">
+    <h3 class="stat-label">Words</h3>
+    <div class="stat-value" id="words">0</div>
+  </section>
+  <section class="stat">
+    <h3 class="stat-label">Characters</h3>
+    <div class="stat-value" id="chars">0</div>
+  </section>
+  <section class="stat">
+    <h3 class="stat-label">Est. cost</h3>
+    <div class="stat-value" id="cost">$0.00</div>
+  </section>
+</div>
 
   <!-- AdSense slot goes here -->
   <div class="ad-slot">
@@ -59,7 +66,6 @@
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
   </div>
-
   <div class="faq">
     <h2>Frequently asked questions</h2>
     <details>
