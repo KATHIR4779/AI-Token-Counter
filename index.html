@@ -4,8 +4,28 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="3xpVS2lESn_zvrdNsHk3daf4PZu0nlxikqgDPAZRQOg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Prompt Token Counter | ChatGPT, Claude & Gemini Calculator</title>
-<meta name="description" content="Free online AI prompt token counter. Instantly estimate tokens, words, and costs for ChatGPT (GPT-4o), Claude 3.5, and Gemini. 100% secure & local.">
+  <title>AI Prompt Token Counter | ChatGPT, Claude & Gemini Calculator</title>
+  <meta name="description" content="Free online AI prompt token counter. Instantly estimate tokens, words, and costs for ChatGPT (GPT-4o), Claude 3.5, and Gemini. 100% secure & local.">
+  
+  <!-- SEO Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Prompt Token Counter",
+    "url": "https://yourdomain.com",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "A free online tool to estimate token counts, word counts, and API costs for major AI models including GPT-4o, Claude, and Gemini."
+  }
+  </script>
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #1a1a1a; }
@@ -15,21 +35,13 @@
     .stats { display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap; }
     .stat { background: #f5f5f5; border-radius: 8px; padding: 16px 24px; flex: 1; min-width: 120px; }
     .stat-value { font-size: 32px; font-weight: 700; color: #0066cc; }
-    .stat-label { font-size: 13px; color: #666; margin-top: 4px; }
-    .ad-slot { margin: 32px 0; text-align: center; background: #fafafa; padding: 16px; border-radius: 8px; }
+    .stat-label { font-size: 13px; color: #666; margin-bottom: 6px; display: block; }
+    .ad-slot { margin: 32px 0; text-align: center; background: #fafafa; padding: 16px; border-radius: 8px; min-height: 280px; }
     .faq { margin-top: 40px; }
     .faq h2 { font-size: 20px; margin-bottom: 16px; }
     .faq details { border: 1px solid #eee; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; }
     .faq summary { cursor: pointer; font-weight: 500; }
     .faq p { margin-top: 8px; color: #555; line-height: 1.6; }
-    .ad-slot { 
-  margin: 32px 0; 
-  text-align: center; 
-  background: #fafafa; 
-  padding: 16px; 
-  border-radius: 8px; 
-  min-height: 280px;
-}
   </style>
 </head>
 <body>
@@ -38,26 +50,27 @@
   <p class="sub">Paste your prompt below to instantly count tokens, words, and characters.</p>
 
   <textarea id="input" placeholder="Paste your AI prompt here..." oninput="count()"></textarea>
-<div class="stats">
-  <section class="stat">
-    <h3 class="stat-label">Estimated Tokens</h3>
-    <div class="stat-value" id="tokens">0</div>
-  </section>
-  <section class="stat">
-    <h3 class="stat-label">Words</h3>
-    <div class="stat-value" id="words">0</div>
-  </section>
-  <section class="stat">
-    <h3 class="stat-label">Characters</h3>
-    <div class="stat-value" id="chars">0</div>
-  </section>
-  <section class="stat">
-    <h3 class="stat-label">Est. cost</h3>
-    <div class="stat-value" id="cost">$0.00</div>
-  </section>
-</div>
 
-  <!-- AdSense slot goes here -->
+  <div class="stats">
+    <section class="stat">
+      <h3 class="stat-label">Estimated Tokens</h3>
+      <div class="stat-value" id="tokens">0</div>
+    </section>
+    <section class="stat">
+      <h3 class="stat-label">Words</h3>
+      <div class="stat-value" id="words">0</div>
+    </section>
+    <section class="stat">
+      <h3 class="stat-label">Characters</h3>
+      <div class="stat-value" id="chars">0</div>
+    </section>
+    <section class="stat">
+      <h3 class="stat-label">Est. cost</h3>
+      <div class="stat-value" id="cost">$0.00</div>
+    </section>
+  </div>
+
+  <!-- AdSense slot -->
   <div class="ad-slot">
     <ins class="adsbygoogle"
          style="display:block"
@@ -66,6 +79,7 @@
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
   </div>
+
   <div class="faq">
     <h2>Frequently asked questions</h2>
     <details>
